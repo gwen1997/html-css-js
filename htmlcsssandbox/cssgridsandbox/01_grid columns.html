@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .item{
+      padding: 3rem;
+      border: 1px solid #ccc;
+      background: #f4f4f4;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .grid{
+      display: grid;
+      
+      grid-template-columns: 200px 200px 200px;
+      grid-template-columns: 200px auto 200px;    /*middle one strench to fill the container*/
+      grid-template-columns: auto auto auto;    
+      grid-template-columns: repeat(3,auto);    
+      grid-template-columns: 1fr 2fr 1fr;     
+      gap: 1rem;
+    } 
+    
+    main{
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.5rem;
+    }
+
+
+
+  </style>
+
+  <title>grid columns</title>
+</head>
+
+<body>
+
+  <div class="grid">
+    <div class="item">item 1</div>
+    <div class="item">item 2</div>
+    <div class="item">item 3</div>
+  </div>
+
+  <main>
+    <section>
+      <h3>welcome to my site</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, rem.</p>
+    </section>
+    <aside>
+      <h3>hello</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, commodi?</p>
+    </aside>
+  </main>
+
+</body>
+</html>

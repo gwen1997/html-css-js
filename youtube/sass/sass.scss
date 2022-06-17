@@ -1,0 +1,221 @@
+
+// @import 'config';     like the utility file (file name: '_config.scss'. '_' means partial)
+
+$font-stack: Arial, Helvetica, sans-serif;
+$light-color: #f4f4f4;
+$primary-color: #0e6cff;
+$secondary-color: #ff8700;
+// $primary-color: #e0ffff;       //lighter than the original primary color
+
+
+
+
+
+// set text color based on the li ghtness of background color
+
+@function set-text-color($color){            //$:parameter(variable)
+	@if(lightness($color) > 70){           //if the color lightness passed in > 70
+	  @return #333;
+	 }@else{
+	  @return #fff;
+    }
+}
+
+
+// set background and text color. text gonna be opposite whatever the background is
+
+@mixin set-background($color){         //mix line 120 with line 124
+	background-color: $color;
+	color: set-text-color($color);
+}
+
+
+
+
+//create margin and padding classes using each loop
+
+$spaceamounts: (1,2,3,4,5);     //create a variable, set to a list
+
+@each $space in $spaceamounts {      //loop through the list
+	.m-#{$space}{
+		margin:#{$space}rem;            //space: access of each numbers
+	}
+	.my-#{$space}{
+		margin:#{$space}rem 0;
+	}
+
+	.p-#{$space}{
+		padding:#{$space}rem;
+	}
+	.py-#{$space}{
+		padding:#{$space}rem 0;
+	}
+}
+
+
+
+
+%btn{
+	display:inline-block;
+	border-radius:5px;
+	padding:8px 20px;
+	margin:3px;                 //%:shared style with btn-primary and secondary
+
+	&:hover{
+		transform: scale(0.98);
+	}
+}
+
+.btn-primary{
+	@extend %btn;
+	// background-color: lighten($primary-color, 10%);      //darken
+
+	@include set-background(lighten($primary-color, 10%));
+}
+
+.btn-secondary{
+	@extend %btn;
+	// background-color:$secondary-color;
+
+	@include set-background($secondary-color);
+}
+
+
+
+
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-color: $light-color;
+	font-family: $font-stack;
+	line-height: 1.6;
+}
+
+.container{
+	max-width:1100px;
+	padding:0 30px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.img{
+	width:100%;
+}
+
+a{
+	text-decoration:none;
+}
+
+
+
+
+
+.showcase{
+	height:600px;
+	// background-color:$primary-color;
+	@include set-background($primary-color);    //mixin: take 120 and 124 together; use 'inclue' when mixin
+
+	// color:#fff;
+	// color: set-text-color($primary-color);     //takes in the background (primary) color
+	
+	
+	nav{
+		display:flex;
+		align-items: center;
+		justify-content: space-between;
+
+		ul{
+			display: flex;
+			list-style: none;
+		} 
+
+		li{
+			padding:15px;
+		}
+
+		a{
+			color: set-text-color($primary-color);   //takes in the background (primary) color
+		}
+
+		a:hover{
+			color:$secondary-color;
+		}
+	}
+
+	// a{
+	// 	color:#fff;
+	// }
+}	
+
+
+.showcase-content{            
+	height:100%;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	margin-top: 30px;
+
+	img{
+		width:50%;
+	}
+
+	h1{
+		font-size: 50px;
+		line-height: 1.2;
+	}
+
+	// p{
+	// 	margin: 20px 0;
+	// }
+}
+
+
+
+
+@media(max-width: 700px){
+	.showcase{
+		height: 400px;
+
+		&-content{
+			text-align: center;
+
+			img{
+				display: none;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

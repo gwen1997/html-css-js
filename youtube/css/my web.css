@@ -1,0 +1,122 @@
+body{
+	background-color: #f4f4f4;
+	color: #555;
+	font-family: Ariel, Helvetica, sans-serif;
+	font-size: 20px;
+	line-height: 1.67em;
+	margin: 50px;
+
+}
+
+.container{
+	width: 80%;
+	margin: auto;
+	overflow: hidden; /*visible, hidden, scroll*/
+}
+
+
+
+#main-header{
+	background-color: coral;
+	color: #fff;
+}
+
+
+
+#navbar{
+	background-color: #333;
+}
+
+#navbar ul{
+	padding: 0;
+	list-style: none; /*get rid of the bullet point*/
+}
+
+#navbar li{
+	display: inline; /*inline instead of block */
+	padding-right: 30px;
+}
+
+#navbar a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 28px;
+}
+
+
+
+#showcase {
+	background-image: url('bg image.jpeg');
+	background-position: center right;
+	min-height: 200px; /*image height will grow with content if make window smaller, otherwise text go outside the image */
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+
+#showcase h1{
+	color: coral;
+	font-size: 50px;
+	line-height: 1.6em;
+	padding: 40px 0;
+}
+
+
+
+#main{
+	float: left;
+	width: 70%;
+	padding: 0 40px 20px 0;
+	box-sizing: border-box;
+}
+
+#sidebar{
+	float: right;
+	width: 30%;
+	background: #333;
+	color: #fff;
+	padding: 10px;
+	box-sizing: border-box;
+	margin-top: 40px;
+}
+
+
+
+
+#main-footer{
+	background: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+	margin-top: 40px;
+}
+
+@media(max-width:768px){
+	#main{
+		width: 100%;
+		float: none;
+	}
+	#sidebar{
+		width: 100%;
+		float: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

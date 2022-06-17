@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex basics</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .item{
+      background-color: #f4f4f4;
+      border: #ccc solid 2px;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      /* width: 200px; */
+
+      /* flex-grow: 1;    3 items fill out the rest of row */
+      /* flex: 1 0 200px;   grow shrink basis */
+      /* flex: 1;           flex grow=1*/
+    }
+
+    .flex-container{
+      display: flex;
+      /* flex-direction: column-reverse, row-reverse; */
+      /* flex-wrap: wrap; */
+    }
+
+    .item-1{
+      /* flex-shrink: 0;    item 1 won't shrink */
+    }
+
+    .item-2{
+      flex-grow: 1;     /* item 2 fill out the rest of row*/
+      flex-basis: 0;    /*set the width */
+    }
+
+    .item-3{
+      flex-grow: 2;   /*twice the size of item-2*/
+      flex-basis: 0;
+      flex: 3;        /* 3 times the size */
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="flex-container">
+    <div class="item item-1">
+      <h3>item 1</h3>
+    </div>
+    <div class="item item-2">
+      <h3>item 2</h3>
+    </div>
+    <div class="item item-3">
+      <h3>item 3</h3>
+    </div>
+   
+  </div>
+</body>
+</html>

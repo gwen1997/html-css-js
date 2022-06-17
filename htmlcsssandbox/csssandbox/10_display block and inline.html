@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>inline and block</title>
+  <style>
+
+
+    li{
+      display: inline;         /* change block level element to inline element*/
+    }
+
+    li a{
+      padding-right: 20px;
+    }
+
+    img{
+      display: block;       /*in order to add margin auto: change inline element to block level element*/
+      margin: auto;     
+    }
+
+    .box{
+
+      width: 32%;
+
+      box-sizing: border-box;
+      
+      display: inline-block;     /*cannot use width on inline. inline-block allows to set a width and height on the element;  top and bottom margins/paddings are respected;  does not add a line-break after the element, so the element can sit next to other elements.*/
+      
+      background: #f4f4f4;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <ul>
+    <li><a href="#">technology</a></li>
+    <li><a href="#">business</a></li>
+    <li><a href="#">fashion</a></li>         
+  </ul>
+
+  <br>
+
+  <img src="./img/leaf.png" alt="my image">     
+
+  <br>
+
+  <div class="box">
+    <h3>heading</h3>
+    <p>ncwlvwlcvm c;mde;cf w;e vc;ewv cew vkew;cmqew;fm;elwqmf;de mdw;dmwq;fmqw</p>
+  </div>
+  <div class="box">
+    <h3>heading</h3>
+    <p>ncwlvwlcvm c;mde;cf w;e vc;ewv cew vkew;cmqew;fm;elwqmf;de mdw;dmwq;fmqw</p>
+  </div>
+  <div class="box">
+    <h3>heading</h3>
+    <p>ncwlvwlcvm c;mde;cf w;e vc;ewv cew vkew;cmqew;fm;elwqmf;de mdw;dmwq;fmqw</p>
+  </div>
+
+</body>
+</html>

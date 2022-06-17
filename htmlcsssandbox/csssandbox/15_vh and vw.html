@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>viewport height and viewport width</title>
+  <style>
+
+/* viewport: whole area inside browser */
+
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header{
+      background: #333 url('https://source.unsplash.com/daily') no-repeat center center/cover;
+      color:#fff;
+      /* height:100% */     /*doesnt help*/
+      height: 100vh;       /*cover everything. there are 100 slices in total*/
+      /* width: 50vw; */
+      
+      text-align: center;
+      padding: 2rem;
+      padding-top: 15rem;
+    }
+
+    header h1{
+      font-size: 3rem;
+    }
+
+    header p{
+      margin: 1rem 0;
+    }
+
+    .btn{
+      display: inline-block;
+      text-decoration: none;
+      background: #f4f4f4;
+      color: #333;
+      padding: 0.75rem 2rem;
+    }
+
+    section{
+      padding: 2rem;
+    }
+
+    @media(max-height: 450px){    
+      header{
+        padding-top: 5rem;      /*landscape*/
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>welcome</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus repellendus, laboriosam esse fuga quasi labore?</p>
+    <a href="#" class="btn">find out mpre</a>
+  </header>
+
+  <section>
+    <h3>about</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, reprehenderit ab ducimus aliquam asperiores deleniti vero eius quos? Ipsam, suscipit?</p>
+  </section>
+
+
+
+</body>
+</html>

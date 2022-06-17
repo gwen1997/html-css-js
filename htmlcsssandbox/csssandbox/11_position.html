@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>positioning</title>
+  <style>
+    body{
+      height: 4000px;
+    }
+
+    .box{
+      width: 100px;
+      height: 100px;
+    }
+
+    #box-1{
+      position:relative;   /* move from its natural place */
+      top: 50px;
+      left: 50px;
+
+      background:red;
+
+      z-index: 2;         /*higher z-index, closer to you*/
+    }
+
+    .container{
+
+      position: relative;     /*parent*/
+
+      width: 500px;
+      height: 500px;
+      background: #333;
+    }
+
+    #box-2{
+
+      position:absolute;    /*move within the container*/
+      
+      top: 100px;
+      left: 100px;
+      background:green;
+    }
+
+    #box-3{
+      position: absolute;
+      bottom:100px;
+      right:100px;
+      background:yellow;
+    }
+
+    #box-4{
+      position: fixed;
+      top:100px;
+      right:10px;
+      background:blue;
+    }
+
+    #box-5{
+      position: sticky;      /*sticky to the top when scroll down, like the nav menu*/
+      top:0;
+      background:pink;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="box-1" class="box">box1</div>
+
+  <div class="container">
+    <div id="box-2" class="box">box2</div>
+    <div id="box-3" class="box">box3</div>
+  </div>
+
+  <div id="box-4" class="box">box4</div>
+  <div id="box-5" class="box">box5</div>
+</body>
+
+</html>

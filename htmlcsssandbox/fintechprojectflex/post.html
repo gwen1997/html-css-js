@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="utilities.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>post 1</title>
+</head>
+
+
+<body id="home">
+  <header class="hero blog">
+
+    <div class="navbar top" id="navbar">
+      <h1 class="logo">
+        <span class="text-primary"><i class="fas fa-book-open"></i>Edge</span>Ledger
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="index.html#about">about</a></li>
+          <li><a href="index.html#cases">cases</a></li>
+          <li><a href="index.html#blog">blog</a></li>
+          <li><a href="index.html#contact">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content">
+      <h1>blog</h1>
+    </div>
+
+  </header>
+
+  <section class="post">
+    <h2>blog post 1</h2>
+    <p class="meta">
+      <i class="fas fa-user"></i>posted by wen<strong>wen gu</strong> | May 2022
+    </p>
+    <img src="./image_resources/blog/blog1.jpg" alt="">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, praesen
+      tium? Esse earum quidem in dolor incidunt, soluta repellendus odio magni.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, praesen
+      tium? Esse earum quidem in dolor incidunt, soluta repellendus odio magni.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aliqui
+      d culpa cum quidem ullam exercitationem, delectus ex molestias veritatis n
+      isi.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, praesen
+      tium? Esse earum quidem in dolor incidunt, soluta repellendus odio magni.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aliqui
+      d culpa cum quidem ullam exercitationem, delectus ex molestias veritatis n
+      isi.kkfmewkrw;vwerfe;w
+    </p>
+  </section>
+
+  
+
+  <footer class="footer bg-dark">
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>copyright &copy; 2022 - edgeledger</p>
+  </footer>
+
+
+
+
+
+
+  <script>
+    const navbar = document.getElementById('navbar')
+    let scrolled = false;
+  
+    window.onscroll = function(){
+      if(window.pageYOffset > 100){
+        navbar.classList.remove('top');
+        if(!scrolled){
+          navbar.style.transform = 'translateY(-70px)'
+        }
+        setTimeout(function(){
+          navbar.style.transform = 'translateY(0)'
+          scrolled = true;
+        }, 200)
+      }else{
+        navbar.classList.add('top')
+        scrolled = false
+      }
+    }
+  </script>
+
+</body>
+</html>

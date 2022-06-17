@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      background: #333;
+    }
+
+    .box{
+      background: #fff;
+      width: 200px;
+      height: 200px;
+      position: relative;
+
+      animation-name: activity1;
+      animation-duration: 2s;
+      animation-iteration-count: 2;  /* repeat twice; infinite*/
+      animation-fill-mode: forwards;   /*keep at stretched out 600px*/
+      animation-delay: 1s;     /*wait 1s then start animating*/
+      animation-direction: alternate;    /*back and forth*/
+      animation-timing-function: ease-in;   /*start slow and end quick*/
+
+      /*animation: name duration fill-mode timing-function delay iteration-count direction ;*/
+      animation: activity1 2s forwards ease-in;
+
+    }
+
+    @keyframes activity1{
+      from{
+        width:200px;
+        background: #fff;
+        top: 0;
+      }
+      to{
+        width: 600px;
+        background: red;
+        top: 300px;
+      }
+    }
+
+  </style>
+  <title>keyframe</title>
+</head>
+
+<body>
+  <div class="box">
+
+  </div>
+</body>
+</html>

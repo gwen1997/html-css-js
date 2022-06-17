@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>margin and padding; box model</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .box{
+      background:#f4f4f4;
+      border: 2px grey solid;
+      width: 500px;   /*if not border-box, when adding padding, width increase*/
+      padding: 20px;
+      margin: 20px;
+
+      padding-top:10px; /*top right bottom right;  top, leftandright, bottom*/
+    }
+
+    .box p{
+      margin: 0;
+    }
+
+    .box h3{
+      padding-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h3>box one</h3>
+    <p>lorem dnvewkv sd vccqefm'qwacmqw'fc c'l,awlmqcf'qefm'ewmgrwm</p>
+  </div>
+  <div class="box">
+    <h3>box one</h3>
+    <p>lorem dnvewkv sd vccqefm'qwacmqw'fc c'l,awlmqcf'qefm'ewmgrwm</p>
+  </div>
+ </body> 
+</html>

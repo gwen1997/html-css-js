@@ -1,0 +1,309 @@
+ /*     *{
+	  margin: 0;
+	  padding: 0;
+       }            */
+
+ /*default setup: zero everything default out */
+
+
+
+body{   /*change everything body itself */
+	background-color:f4f4f4;
+	color: #555555;/*text */
+	font-family: Ariel, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+
+	/*same as above */
+
+	font: normal 16px Ariel, Helvetica, sans-serif;
+
+	line-height: 1.6em;/*30px */
+	margin: 0;
+
+}
+
+a{
+	text-decoration: none; /* a: style the link; get rid of the underline*/
+	color: #000000;
+}
+
+a:hover{
+	color: red;
+}
+
+a:active{
+	color: green;
+}
+
+a:visited{
+	
+}
+
+
+
+.container{ /*!!!!!*/
+	width: 80%; /*make the page responsive; adjust based on the page's width */
+	margin: auto; /*put to middle, even amount of margin on both*/
+}
+
+
+
+
+.button{
+	background-color: #333333;
+	color: #ffffff;
+	padding:  10px 15px;  /*apply to both buttom: readmore, submit; */
+	border: none;
+}
+
+.button:hover{
+	background: red;
+	color: white;
+}
+
+
+
+
+
+
+.box-1{
+	background-color:#333333;
+	color: #000000;
+	border-right: 5px red solid;
+	border-left: 5px red solid;
+	border-top: 5px red solid;
+	border-bottom: 5px red solid;
+	 /*same as: border: 5px red solid */
+	 /*padding is the space inside border, margin is the outside of the border */
+	border-width: 3px; 
+	border-bottom-width: 10px;
+	border-top-style: dotted;
+
+	padding: 15px;
+
+	margin: 10px 0px; /*only for top and bottom, o for right and left */
+
+	/* top right bottom left */
+
+}
+
+
+
+.box-1 h1{
+	font-family: Tahoma;
+	font-weight: 800;
+	font-style: italic;
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing:  0.2em;
+	word-spacing: 1em;
+ /* only for h1 under class box-1 */
+
+}
+
+.box-1 p{
+	color: red;
+}
+
+
+.box-2{
+
+	border: 3px dotted #cccccc;
+	padding: 20px;
+	margin: 20px 0;
+}
+
+
+
+
+.categories{
+	border: 1px #cccccc solid;
+	padding: 10px;
+	border-radius: 15px;
+	background-color: yellow;
+}
+
+
+.categories h2{
+	text-align: center;
+}
+
+.categories ul{
+	padding: 0; /*zero out default padding - push to the left*/
+	list-style: square;
+	list-style: none; /*cover the list-styke-square*/
+	/* list-style-image: url('../desktop/checkmark.png'); */
+}
+
+.categories li{
+	padding-bottom: 8px;
+	border-bottom: dotted 1px #333333;
+	background-color: green;
+}
+
+.categories a{
+	color: red;
+}
+
+
+
+
+.my-form{
+	padding: 20px;
+}
+
+.form-group{
+	padding-bottom: 25px;
+}
+
+
+.my-form label{
+	display: block; /*label on their own line */
+	padding-top: 10px;
+}
+
+.my-form input[type="text"], .my-form textarea{
+	padding: 18px;
+	width: 100%;
+}
+
+/*.my-form input[type='submit']{
+	background-color: #333333;
+	color: #ffffff;
+	padding:  10px 15px;  /*apply to both buttom: readmore, submit; 
+/*	border: none;
+}*/
+
+
+
+.block{
+	float: left; /*if not float start with the next line*/
+	width: 33.3%;
+	border: 1px solid #ccc;
+	padding:  20px;
+	box-sizing: border-box; 
+}
+
+
+
+.clr{
+	clear: both; /*the element is pushed below both left and right floted element*/
+	/*when float stuff, going to clear it*/
+}
+
+
+#main-block{
+	float: left;
+	width: 70%;
+	padding: 35px;
+	box-sizing:  border-box; /*allows us to include the padding and border in an element's total width and height.*/
+}	
+
+#sidebar{
+	float: right;
+	width: 30%;
+	background-color: #333;
+	color: ##fff;
+	padding: 15px;
+	box-sizing: border-box;
+	margin-top: 10px;
+}
+
+
+
+/* position: ;
+relative: positioned relative to its normal position;
+absolute: target inside of relative; */
+
+.p-box{
+	border: 1px solid #000;
+	margin-top: 20px;
+	background-image: url('bg image.jpeg'); /*..:bring out */
+	background-position: center center;
+	min-height: 200px;
+	/*background-repeat: no-repeat;*/
+	/*width: 800px; 
+	height: 500px; */
+	position: relative; /*as the parent element for p-box h1 */
+}
+
+.p-box h1{
+	position: absolute; /*if no parent element, will go to top */
+	top: 50px;
+	left: 200px;
+}
+
+.p-box h2{
+	position: absolute; /*if no parent element, will go to top */
+	bottom: 40px;
+	right: 100px;
+}
+
+
+
+.fix-me{
+	position: fixed; 
+	top: 400px;
+	right: 100px;
+}
+
+
+
+
+.my-list li:first-child{
+	color: red;
+	background: blue;
+}
+
+.my-list li:last-child{
+	background: blue;
+}
+ 
+.my-list li:nth-child(even){
+	background: yellow;
+}
+
+.my-list li:nth-child(3){
+	background: red;
+}
+
+.my-list{
+	list-style: none;
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

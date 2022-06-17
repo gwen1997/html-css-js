@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float and align</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+  
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.4rem;
+    }
+
+    .container{
+      max-width: 960px;    /* dont use width but max-width. make sure all the text is visible regardless of screen size*/
+      margin: 30px auto;
+    }
+
+    .clr{
+      clear: both;            /*clear the left and right float*/
+    }
+
+    .box{
+      background: #f4f4f4;
+      border: 1px solid #333;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .box p{
+      text-align: justify;    /* text even on the edge */
+      text-align: center;
+    }
+
+    #box-2{
+      float: left;
+      width: 68%   /*add width when float sth*/
+    }
+
+    #box-3{
+      float: right;
+      width: 30%;
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <div class="container">
+
+    <div id="box-1" class="box">
+      <h3>heading</h3>
+      <p>cnmdkslcdls klsacmmc;DXW DLCM;Wdmw'slDWEF DMWQDLMX'L fmnkeqlanfk;ewv;wegv w;regb</p>
+    </div>
+    <div id="box-2" class="box">
+      <h3>heading</h3>
+      <p>cnmdkslcdls klsacmmc;DXW DLCM;Wdmw'slDWEF DMWQDLMX'L nfwqklnfkcql fcqdnwqnfl;mewlg</p>
+    </div>
+    <div id="box-3" class="box">
+      <h3>heading</h3>
+      <p>cnmdkslcdls klsacmmc;DXW DLCM;Wdmw'slDWEF DMWQDLMX'L dnqwa;fcdaw;f ;wegf ;rewgklqne</p>
+    </div>
+
+    <div class="clr"></div>   <!--floated element have to be cleared! important-->
+
+    <div id="box-4" class="box">
+      <h3>heading</h3>
+      <p>cnmdkslcdls klsacmmc;DXW DLCM;Wdmw'slDWEF DMWQDLMX'L dnqwa;fcdaw;f ;wegf ;rewgklqne</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
+
+

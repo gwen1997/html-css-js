@@ -1,0 +1,175 @@
+.menu-wrap{         /*covers everything including overlay*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-wrap .toggler{     /*checkbox:for functionality*/
+  position: absolute;
+
+  top:0;
+  left:0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;      /*checkbox is invisible*/
+}
+
+.menu-wrap .hamburger{    /*create the square*/
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  z-index: 1;   /*under the checkbox*/
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* hamburger middle line */
+.menu-wrap .hamburger > div{
+  position: relative;
+
+  flex: none;     /*It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting "flex: 0 0 auto".*/
+  width: 100%;
+  height: 2px;
+  background:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.4s ease;
+}
+
+/* hamburger top and bottom line */
+.menu-wrap .hamburger > div:before{
+  content: '';
+  position: absolute;
+
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+.menu-wrap .hamburger > div:after{
+  content: '';
+  position: absolute;
+
+  z-index: 1;
+  top: 10px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+
+/* toggler animation */
+.menu-wrap .toggler:checked + .hamburger > div{     /*only applicable if checked*/
+  transform: rotate(135deg);    /*  ///  */
+}
+
+/* turns lines into x */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after{
+  top:0;
+  transform: rotate(90deg);
+
+  /* The code takes the extra two lines, that were originally offset, and brings 
+  them back to their original created spot at TOP:0; so now there is only 1 line like t
+  his: /  and even though it looks like one line it is actually 3. so the next code of 
+  transform: rotate(90deg); takes the BEFORE and AFTER lines and rotates them 90deg from 
+  the 135 degree position which then creates the X. */
+}
+
+
+/* rotate on hover when checked */
+
+.menu-wrap .toggler:checked:hover + .hamburger > div{
+  transform: rotate(225deg);
+}
+
+
+
+
+/*show menu when checked*/
+.menu-wrap .toggler:checked ~.menu{    /* ~: target something proceeds another element*/
+  visibility: visible;      /* initially set to hidden: line128*/
+}
+
+.menu-wrap .toggler:checked ~.menu > div{
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~.menu > div > div{
+  opacity:1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+
+
+
+
+.menu-wrap .menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  visibility: hidden;     /* cannot see before click. still there in terms of a space */
+  
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div{        /* the overlay (dark part) */
+  background-color: var(--overlay-color);
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  transform: scale(0);     /*cannot see before click*/
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div{     /*inside the dark*/
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+
+  opacity: 0;       /*cannot see before click*/
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li{
+  list-style: none;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a{
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+
+  transition: color 1s ease
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover{
+  color: var(--secondary-color)
+}
